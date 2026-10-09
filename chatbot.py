@@ -29,7 +29,7 @@ def responder(mensaje: str) -> str:
         return "¡Por supuesto! Escribe la palabra 'programa' para ver toda la información"
     
     if "programa" in texto:
-        return "Claro, los programas disponibles son: " \
+        return "Los programas que se encuentran disponibles son: " \
         "\n1. Análisis y desarrollo de software " \
         "\n2. Animación 3D " \
         "\n3. Animación digital " \
@@ -38,10 +38,10 @@ def responder(mensaje: str) -> str:
         "\n6. Desarrollo multimedia y web " \
         "\n7. Desarrollo de videojuegos " \
         "\n8. Coordinación de procesos logísticos  " \
-        "\n\nPara consultar la modalidad de uno de los programas escribe la palabra 'modalidad'"
+        "\nPara consultar la modalidad de uno de los programas escribe la palabra 'modalidad'"
     
-    if any(palabra in texto for palabra in ("modalidad")):
-        return "\n1. Análisis y desarrollo de software: Presencial/Virtual " \
+    if "modalidad" in texto:
+        return  "\n1. Análisis y desarrollo de software: Presencial/Virtual " \
                 "\n2. Animación 3D: Presencial/Virtual " \
                 "\n3. Animación digital: Presencial/Virtual " \
                 "\n4. Desarrollo de medios gráficos visuales: Presencial/Virtual " \
@@ -49,11 +49,25 @@ def responder(mensaje: str) -> str:
                 "\n6. Desarrollo multimedia y web: Virtual " \
                 "\n7. Desarrollo de videojuegos: Virtual " \
                 "\n8. Coordinación de procesos logísticos: Virtual" \
-                "\n\nSi deseas saber cuanto dura cada programa escribe la palabra 'duracion'."
+                "\nSi deseas saber cuanto dura cada programa escribe la palabra 'duracion'."
                 
     if "duracion" in texto:
-        return "\nTodos los programas cuentan con una duración de 27 Meses" "\n\nPara saber si hay incripciones abiertas de los programas escribe la palabra 'inscripcion'."
+        return "\nTodos los programas cuentan con una duración de 27 Meses" "\nPara conocer el código del programa de interes escribe 'codigo'" 
+    
+    if "codigo" in texto:
+        return "\n1. 228118" \
+               "\n2. 924118" \
+               "\n3. 233101" \
+               "\n4. 524704" \
+               "\n5. 124100" \
+               "\n6. 217320" \
+               "\n7. 228108" \
+               "\n8. 121523" \
+               "\n\nPara saber si hay incripciones abiertas de los programas escribe la palabra 'inscripcion'."
 
+    if "inscripcion" in texto:
+        return "Lo sentimos, actualmente no hay inscripciones abiertas."
+    
     if "nombre" in texto:
         return "Soy un chatbot básico hecho con Python."
         
