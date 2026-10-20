@@ -1,11 +1,10 @@
-"""Chatbot básico con API HTTP y una interfaz web mínima."""
-
 from typing import Dict, List
 import unicodedata
 
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, Field
+from iaGenerativa import generar_respuestas
 
 app = FastAPI(title="SENA bot", version="1.0.0")
 
@@ -27,8 +26,8 @@ def normalizar(texto: str) -> str:
     )
 
 
-def responder(mensaje: str) -> str:
-    """Genera una respuesta por reglas; reemplaza esta función para usar un LLM."""
+"""def responder(mensaje: str) -> str:
+    Genera una respuesta por reglas; reemplaza esta función para usar un LLM
     texto = normalizar(mensaje)
 
     if not texto:
@@ -99,7 +98,7 @@ def responder(mensaje: str) -> str:
         return "Puedo responder saludos y algunas preguntas sencillas. ¿Qué necesitas?"
         
     return f"Entiendo. Cuéntame un poco más sobre: «{mensaje.strip()}»"
-
+"""
 
 @app.get("/", response_class=HTMLResponse)
 def pagina() -> str:
@@ -112,8 +111,9 @@ def health() -> dict:
 
 
 @app.post("/api/chat", response_model=ChatResponse)
-def chat(request: ChatRequest) -> ChatResponse:
-    return ChatResponse(reply=responder(request.message))
+async  def chat(request: ChatRequest) -> ChatResponse:
+    respuesta = await generar_respuestas(request.message)
+    return ChatResponse(reply = respuesta)
 
 
 HTML = r"""<!doctype html>
