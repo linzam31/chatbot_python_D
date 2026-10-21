@@ -28,7 +28,7 @@ async def generar_respuestas(pregunta: str) -> str:
     contexto = leer_contexto()
     
     instrucciones = f"""
-    Eres Chatcenigrafi, asistente informativo de cenigraf.
+    Eres Chatcenigraf, asistente informativo de cenigraf.
     Responder en español.
     Utiliza el contexto y la información que te sea entregada para contestar.
     De forma clara, amable y precisa.

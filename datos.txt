@@ -1,10 +1,208 @@
-el sena enseña desarrollo web
-hay cursos presenciales
-puedes aprender videojuegos
-consulta la oferta en internet
-hay cursos de diseño grafico
-inscripciones abiertas en la web
-hay programas de logistica
-el sena tiene muchos cursos
-puedes estudiar en linea
-todos los programas son gratis
+INFORMACIÓN GENERAL
+ALIANZA SENA
+DESDE 1967
+58 años formando talento gráfico
+Misión y visión institucional SENA
+Artes gráficas Comunicación Innovación
+¿Quiénes somos?
+Formamos profesionales en artes gráficas con metodologías innovadoras, acceso a tecnología de punta y un enfoque integral adaptado a las necesidades de la industria.
+Misión
+El SENA invierte en el desarrollo social y técnico de los trabajadores colombianos, ofreciendo formación profesional integral para la incorporación y el desarrollo de las personas en actividades productivas que aporten al crecimiento del país.
+Visión
+Ser referente en la cualificación del talento humano a nivel nacional e internacional, a través de la formación técnica, tecnológica y la innovación metodológica permanente.
+
+
+FUENTE DE INFORMACION
+
+
+
+PROGRAMAS TECNOLOGOS PRESENCIALES
+1. Animación 3D 
+    Código: 924118
+    Duración: 27 meses
+    Estado: Inscripciones NO abiertas
+
+2. Desarrollo de medios gráficos visuales
+    Código: 524704
+    Duración: 27 meses
+    Estado: Inscripciones NO abiertas
+
+3. Gestión de procesos de preprensa 
+    Código: 922609 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+4. Supervisión de procesos gráficos 
+    Código: 922601 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+5. Fotografía y procesos digitales 
+    Código: 522100 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+6. Animación digital 
+    Código: 513601 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+7. Análisis y desarrollo de software 
+    Código: 228118 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+8. Producción multimedia 
+    Código: 228101 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+
+
+PROGRAMAS TECNOLOGOS VIRTUALES
+1. Análisis y desarrollo de software 
+    Código: 228118 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+2. Animación 3D 
+    Código: 924118 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+3. Animación digital 
+    Código: 233101 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+4. Desarrollo de medios gráficos visuales 
+    Código: 524704 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+5. Desarrollo publicitario 
+    Código: 124100 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+6. Desarrollo multimedia y web 
+    Código: 217320 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+7. Desarrollo de videojuegos 
+    Código: 228108 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+8. Coordinación de procesos logísticos 
+    Código: 121523 
+    Duración: 27 meses 
+    Estado: Inscripciones NO abiertas
+
+
+
+PROGRAMAS TECNICOS PRESENCIALES
+1. Preprensa digital 
+    Código: 937210 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+2. Impresión offset 
+    Código: 924102 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+3. Impresión flexográfica 
+    Código: 924103 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+4. Impresión serigráfica 
+    Código: 924104 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+5. Integración de contenidos digitales 
+    Código: 524704 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+6. Programación de software 
+    Código: 233104 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+7. Encuadernación y acabados 
+    Código: 924301 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+8. Elaboración de audiovisuales 
+    Código: 924100 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+9. Impresión digital 
+    Código: 233101 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+10. Sistemas teleinformáticos 
+    Código: 233108 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+
+
+PROGRAMAS TECNICOS VIRTUALES
+1. Integración de contenidos digitales
+    Código: 524704
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+2. Operaciones de comercio exterior 
+    Código: 134600 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+3. Preselección de talento humano 
+    Código: 134206 
+    Duración: 15 meses 
+    Estado: Inscripciones NO abiertas
+
+
+INFORMACIÓN SOBRE LAS INSCRIPCIONES
+Portal de Inscripciones:
+https://betowa.sena.edu.co
+
+
+INFORMACIÓN DE CONTRATO DE APRENDIZAJE
+Gina Marcela Contreras Quiroga
+LIDER CONTRATO DE APRENDIZAJE
+DATOS DE CONTACTO
+CENTRO DE FORMACIÓN
+NOMBRE
+Gina Marcela Contreras Quiroga
+CENTRO
+Centro para la Industria de la Comunicación Gráfica
+ROL
+Lider Contrato de Aprendizaje
+REGIONAL
+CORREO
+Distrito Capital
+gmcontreras@sena.edu.co
+DIRECCIÓN
+Cra. 32 #15-80, Bogotá D.C.
+
+
+
+INFORMACIÓN DE CONTACTO
+Servicio Nacional de Aprendizaje SENA - Centro para la Industria de la Comunicación Gráfica Cenigraf - Regional Distrito Capital
+Dirección: Cra. 32 #15 - 80 
+Teléfonos: 546 1500 ο 596 0100 
+Ext.: 15 463
+Atención telefónica: lunes a viernes 7:00 a.m. a 7:00 p.m. - sábados 8:00 a.m. a 1:00 p.m.
+Línea de atención al ciudadano, empresario y línea PQRS: Bogotá +(57) 601 7366060
+Línea gratuita y resto del País: 018000 910270
+

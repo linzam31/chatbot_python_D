@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SENA bot</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  <h1>SENA bot</h1>
+
+  <aside>
+      <h3>Preguntas frecuentes</h3>
+      <ul>
+        <li>¿Cuál es la oferta educativa?</li>
+        <li>¿Cómo me inscribo?</li>
+        <li>¿Cuánto dura cada programa?</li>
+        <li>¿Qué modalidades hay? </li>
+        <li>¿Cuál es el código del programa?</li>
+        <li>¿Hay inscripciones abiertas?</li>
+      </ul>
+  </aside>
+  <div id="chat" aria-live="polite"><p class="message">Bot: Bienvenido/a al portal de oferta academica del SENA. ¿Cómo puedo ayudarte?</p></div>
+  <form id="form">
+    <input id="message" autocomplete="off" placeholder="Escribe tu mensaje…" required maxlength="2000">
+    <button type="submit">Enviar</button>
+  </form>
+  <script>
+    const chat = document.querySelector('#chat');
+    const form = document.querySelector('#form');
+    const input = document.querySelector('#message');
+    function addMessage(who, text) {
+      const p = document.createElement('p');
+      p.className = 'message';
+      p.textContent = `${who}: ${text}`;
+      chat.appendChild(p);
+      chat.scrollTop = chat.scrollHeight;
+    }
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const message = input.value.trim();
+      if (!message) return;
+      addMessage('Tú', message);
+      input.value = '';
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message })
+        });
+        if (!response.ok) throw new Error('No se pudo obtener una respuesta.');
+        const data = await response.json();
+        addMessage('Bot', data.reply);
+      } catch (error) {
+        addMessage('Bot', `Error: ${error.message}`);
+      }
+    });
+  </script>
+</body>
+</html>
