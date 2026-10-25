@@ -1,11 +1,415 @@
- body { font: 16px system-ui, sans-serif; 
-    max-width: 680px; 
-    margin: 3rem auto; 
-    padding: 0 1rem; 
-    color: #202124; }
-    #chat { min-height: 260px; border: 1px solid #ddd; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
-    .message { margin: .6rem 0; white-space: pre-wrap; }
-    form { display: flex; gap: .5rem; }
-    input { flex: 1; padding: .8rem; border: 1px solid #aaa; border-radius: 8px; }
-    button { padding: .8rem 1rem; border: 0; border-radius: 8px; background: #1459c7; color: white; cursor: pointer; }
-  
+/* ========================================================
+   ESTILOS SENABot - TEMA NEGRO Y VERDE
+   CSS simple, limpio y de nivel principiante
+   ======================================================== */
+
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo negro de la página y texto blanco */
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+/* Regla para evitar que cualquier imagen se desborde */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenedor principal de la aplicación */
+.contenedor-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 30px);
+  gap: 15px;
+}
+
+/* ========================================================
+   1. BARRA SUPERIOR (HEADER)
+   ======================================================== */
+header {
+  background-color: #121212;
+  border: 1px solid #39a900; /* Verde SENA */
+  border-radius: 10px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo y Título */
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* LOGO: Tamaño fijo y circular para que no ocupe la pantalla */
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #39a900;
+  object-fit: cover;
+}
+
+.marca h1 {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.marca h1 span {
+  color: #39a900; /* Verde SENA */
+}
+
+.marca p {
+  font-size: 13px;
+  color: #aaaaaa;
+}
+
+/* ========================================================
+   2. CONTENIDO PRINCIPAL (PANEL LATERAL + CHAT)
+   ======================================================== */
+.contenido-principal {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* PANEL LATERAL: PREGUNTAS FRECUENTES */
+.seccion-preguntas {
+  width: 320px;
+  background-color: #121212;
+  border: 1px solid #222222;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.titulo-preguntas {
+  font-size: 16px;
+  color: #39a900;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #222222;
+}
+
+.lista-preguntas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* BOTONES DE PREGUNTAS FRECUENTES */
+.btn-pregunta {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #39a900;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.btn-pregunta:hover {
+  background-color: #39a900;
+  color: #000000;
+  font-weight: bold;
+}
+
+.simbolo {
+  color: #39a900;
+  font-weight: bold;
+  margin-right: 8px;
+  font-size: 15px;
+}
+
+.btn-pregunta:hover .simbolo {
+  color: #000000;
+}
+
+/* ========================================================
+   3. ÁREA DEL CHAT
+   ======================================================== */
+.seccion-chat {
+  flex: 1;
+  background-color: #121212;
+  border: 1px solid #222222;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Barra superior del chat */
+.barra-chat {
+  background-color: #181818;
+  padding: 10px 15px;
+  border-bottom: 1px solid #222222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estado-online {
+  font-size: 13px;
+  color: #39a900;
+  font-weight: bold;
+}
+
+/* Botón Limpiar Chat */
+.btn-limpiar {
+  background-color: #dc3545; /* Rojo para borrado */
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-limpiar:hover {
+  background-color: #b02a37;
+}
+
+/* Contenedor de mensajes con scroll */
+.mensajes-chat {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #0a0a0a;
+}
+
+/* Filas de mensaje */
+.fila-mensaje {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  max-width: 80%;
+}
+
+.fila-bot {
+  align-self: flex-start;
+}
+
+.fila-usuario {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+/* Avatar de SENABot en los mensajes */
+.avatar-mensaje {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #39a900;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Burbujas de texto */
+.burbuja {
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Burbuja del Bot */
+.burbuja-bot {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.burbuja-bot strong {
+  color: #39a900;
+}
+
+/* Burbuja del Usuario en Verde SENA */
+.burbuja-usuario {
+  background-color: #39a900;
+  color: #000000;
+  font-weight: 500;
+}
+
+.hora-mensaje {
+  display: block;
+  font-size: 11px;
+  color: #888888;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.burbuja-usuario .hora-mensaje {
+  color: #003300;
+}
+
+/* Indicador de "Escribiendo..." */
+.indicador-escribiendo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  padding: 6px 12px;
+  background-color: #1c1c1c;
+  border: 1px solid #39a900;
+  border-radius: 8px;
+  color: #39a900;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.indicador-escribiendo.oculto {
+  display: none;
+}
+
+/* Acordeón de preguntas para celular */
+.preguntas-movil {
+  display: none;
+  background-color: #141414;
+  border-top: 1px solid #222222;
+  padding: 10px;
+}
+
+.btn-toggle-movil {
+  width: 100%;
+  background-color: #1f1f1f;
+  color: #39a900;
+  border: 1px solid #39a900;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.chips-movil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chips-movil.cerrado {
+  display: none;
+}
+
+.btn-chip {
+  background-color: #222222;
+  color: #39a900;
+  border: 1px solid #39a900;
+  border-radius: 15px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-chip:hover {
+  background-color: #39a900;
+  color: #000000;
+}
+
+/* ========================================================
+   4. FORMULARIO DE ENTRADA (INPUT Y BOTÓN ENVIAR)
+   ======================================================== */
+.formulario-chat {
+  display: flex;
+  gap: 10px;
+  padding: 12px 15px;
+  background-color: #181818;
+  border-top: 1px solid #222222;
+}
+
+.input-mensaje {
+  flex: 1;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #39a900;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-mensaje:focus {
+  border-color: #00ff40;
+}
+
+.input-mensaje::placeholder {
+  color: #777777;
+}
+
+/* BOTÓN ENVIAR VERDE */
+.btn-enviar {
+  background-color: #39a900;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background-color: #00ff40;
+}
+
+.btn-enviar:disabled {
+  background-color: #555555;
+  cursor: not-allowed;
+}
+
+/* ========================================================
+   5. RESPONSIVE (CELULARES)
+   ======================================================== */
+@media (max-width: 768px) {
+  body {
+    padding: 5px;
+  }
+
+  .contenedor-app {
+    height: 100vh;
+  }
+
+  .contenido-principal {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .seccion-preguntas {
+    display: none;
+  }
+
+  .preguntas-movil {
+    display: block;
+  }
+
+  .fila-mensaje {
+    max-width: 90%;
+  }
+}

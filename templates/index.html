@@ -3,57 +3,242 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SENA bot</title>
-  <link rel="stylesheet" href="static/styles.css">
+  <title>SENABot - Asistente Virtual SENA</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="icon" type="image/jpeg" href="/static/senabot.jpg">
 </head>
 <body>
-  <h1>SENA bot</h1>
 
-  <aside>
-      <h3>Preguntas frecuentes</h3>
-      <ul>
-        <li>¿Cuál es la oferta educativa?</li>
-        <li>¿Cómo me inscribo?</li>
-        <li>¿Cuánto dura cada programa?</li>
-        <li>¿Qué modalidades hay? </li>
-        <li>¿Cuál es el código del programa?</li>
-        <li>¿Hay inscripciones abiertas?</li>
-      </ul>
-  </aside>
-  <div id="chat" aria-live="polite"><p class="message">Bot: Bienvenido/a al portal de oferta academica del SENA. ¿Cómo puedo ayudarte?</p></div>
-  <form id="form">
-    <input id="message" autocomplete="off" placeholder="Escribe tu mensaje…" required maxlength="2000">
-    <button type="submit">Enviar</button>
-  </form>
+  <div class="contenedor-app">
+    
+    <header>
+      <div class="marca">
+        <img src="/static/senabot.jpg" alt="Logo SENABot" class="logo" width="48" height="48">
+        <div>
+          <h1>SENA<span>Bot</span></h1>
+          <p>Asistente Virtual • Formación SENA</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="contenido-principal">
+      
+      <aside class="seccion-preguntas">
+        <h2 class="titulo-preguntas">• Preguntas frecuentes</h2>
+        
+        <div class="lista-preguntas">
+          <button type="button" class="btn-pregunta" data-pregunta="¿Qué programas de formación ofrece el SENA?">
+            <span class="simbolo">?</span> ¿Qué programas ofrece el SENA?
+          </button>
+
+          <button type="button" class="btn-pregunta" data-pregunta="¿Cuáles son los requisitos de inscripción para estudiar en el SENA?">
+            <span class="simbolo">?</span> ¿Cuáles son los requisitos de inscripción?
+          </button>
+
+          <button type="button" class="btn-pregunta" data-pregunta="¿Cómo es el proceso de matrícula e ingreso al SENA?">
+            <span class="simbolo">?</span> ¿Cómo es el proceso de matrícula?
+          </button>
+
+          <button type="button" class="btn-pregunta" data-pregunta="¿Dónde se encuentran ubicadas las sedes y centros del SENA?">
+            <span class="simbolo">?</span> ¿Dónde están las sedes del SENA?
+          </button>
+
+          <button type="button" class="btn-pregunta" data-pregunta="¿Cuáles son los horarios y modalidades de formación disponibles?">
+            <span class="simbolo">?</span> ¿Cuáles son los horarios y modalidades?
+          </button>
+        </div>
+      </aside>
+
+      <section class="seccion-chat">
+        
+        <div class="barra-chat">
+          <span class="estado-online">● SENABot en línea</span>
+          <button type="button" class="btn-limpiar" id="btn-limpiar-chat" title="Borrar la conversación">
+            Limpiar chat
+          </button>
+        </div>
+
+        <div class="mensajes-chat" id="caja-mensajes">
+          <div class="fila-mensaje fila-bot">
+            <img src="/static/senabot.jpg" alt="SENABot" class="avatar-mensaje" width="36" height="36">
+            <div class="burbuja burbuja-bot">
+              <p>¡Hola! Soy <strong>SENABot</strong>, tu asistente virtual del SENA. Puedo ayudarte con dudas sobre carreras técnicas, requisitos, matrículas y sedes. Selecciona una pregunta frecuente o escribe tu consulta abajo.</p>
+              <span class="hora-mensaje" id="hora-inicio">10:15 a. m.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="indicador-escribiendo oculto" id="indicador-escribiendo">
+          <img src="/static/senabot.jpg" alt="SENABot" class="avatar-mensaje" width="28" height="28">
+          <span>SENABot está escribiendo...</span>
+        </div>
+
+        <div class="preguntas-movil">
+          <button type="button" class="btn-toggle-movil" id="btn-toggle-movil">
+            Preguntas frecuentes ▼
+          </button>
+          <div class="chips-movil" id="chips-movil">
+            <button type="button" class="btn-chip" data-pregunta="¿Qué programas de formación ofrece el SENA?">Programas</button>
+            <button type="button" class="btn-chip" data-pregunta="¿Cuáles son los requisitos de inscripción para estudiar en el SENA?">Requisitos</button>
+            <button type="button" class="btn-chip" data-pregunta="¿Cómo es el proceso de matrícula e ingreso al SENA?">Matrícula</button>
+            <button type="button" class="btn-chip" data-pregunta="¿Dónde se encuentran ubicadas las sedes y centros del SENA?">Sedes</button>
+            <button type="button" class="btn-chip" data-pregunta="¿Cuáles son los horarios y modalidades de formación disponibles?">Horarios</button>
+          </div>
+        </div>
+
+        <form class="formulario-chat" id="formulario-chat">
+          <input 
+            type="text" 
+            id="input-mensaje" 
+            class="input-mensaje" 
+            placeholder="Escribe tu mensaje a SENABot..." 
+            autocomplete="off" 
+            required 
+            maxlength="2000"
+          >
+          <button type="submit" class="btn-enviar" id="btn-enviar">Enviar</button>
+        </form>
+
+      </section>
+    </main>
+
+  </div>
+
   <script>
-    const chat = document.querySelector('#chat');
-    const form = document.querySelector('#form');
-    const input = document.querySelector('#message');
-    function addMessage(who, text) {
-      const p = document.createElement('p');
-      p.className = 'message';
-      p.textContent = `${who}: ${text}`;
-      chat.appendChild(p);
-      chat.scrollTop = chat.scrollHeight;
+    const cajaMensajes = document.getElementById('caja-mensajes');
+    const formularioChat = document.getElementById('formulario-chat');
+    const inputMensaje = document.getElementById('input-mensaje');
+    const btnEnviar = document.getElementById('btn-enviar');
+    const btnLimpiarChat = document.getElementById('btn-limpiar-chat');
+    const indicadorEscribiendo = document.getElementById('indicador-escribiendo');
+    const btnToggleMovil = document.getElementById('btn-toggle-movil');
+    const chipsMovil = document.getElementById('chips-movil');
+
+    let ocupado = false;
+
+    function obtenerHoraActual() {
+      const ahora = new Date();
+      return ahora.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
     }
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const message = input.value.trim();
-      if (!message) return;
-      addMessage('Tú', message);
-      input.value = '';
+
+    const horaInicio = document.getElementById('hora-inicio');
+    if (horaInicio) {
+      horaInicio.textContent = obtenerHoraActual();
+    }
+
+    function agregarMensaje(remitente, texto) {
+      const fila = document.createElement('div');
+      fila.className = `fila-mensaje ${remitente === 'usuario' ? 'fila-usuario' : 'fila-bot'}`;
+      const hora = obtenerHoraActual();
+
+      if (remitente === 'usuario') {
+        fila.innerHTML = `
+          <div class="burbuja burbuja-usuario">
+            <p>${limpiarHTML(texto)}</p>
+            <span class="hora-mensaje">${hora}</span>
+          </div>
+        `;
+      } else {
+        fila.innerHTML = `
+          <img src="/static/senabot.jpg" alt="SENABot" class="avatar-mensaje" width="36" height="36">
+          <div class="burbuja burbuja-bot">
+            <p>${formatearTextoBot(texto)}</p>
+            <span class="hora-mensaje">${hora}</span>
+          </div>
+        `;
+      }
+
+      cajaMensajes.appendChild(fila);
+      bajarScroll();
+    }
+
+    function bajarScroll() {
+      cajaMensajes.scrollTop = cajaMensajes.scrollHeight;
+    }
+
+    function limpiarHTML(texto) {
+      const div = document.createElement('div');
+      div.textContent = texto;
+      return div.innerHTML;
+    }
+
+    function formatearTextoBot(texto) {
+      return limpiarHTML(texto)
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\n/g, '<br>');
+    }
+
+    async function enviarMensaje(texto) {
+      const textoLimpio = texto.trim();
+      if (!textoLimpio || ocupado) return;
+
+      ocupado = true;
+      inputMensaje.value = '';
+      inputMensaje.disabled = true;
+      btnEnviar.disabled = true;
+
+      agregarMensaje('usuario', textoLimpio);
+
+      indicadorEscribiendo.classList.remove('oculto');
+      cajaMensajes.appendChild(indicadorEscribiendo);
+      bajarScroll();
+
       try {
-        const response = await fetch('/api/chat', {
+        const respuesta = await fetch('/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message })
+          body: JSON.stringify({ message: textoLimpio })
         });
-        if (!response.ok) throw new Error('No se pudo obtener una respuesta.');
-        const data = await response.json();
-        addMessage('Bot', data.reply);
+
+        if (!respuesta.ok) {
+          throw new Error('El servidor no respondió correctamente');
+        }
+
+        const datos = await respuesta.json();
+        indicadorEscribiendo.classList.add('oculto');
+        agregarMensaje('bot', datos.reply || 'No se recibió respuesta.');
       } catch (error) {
-        addMessage('Bot', `Error: ${error.message}`);
+        indicadorEscribiendo.classList.add('oculto');
+        agregarMensaje('bot', `Error: ${error.message}`);
+      } finally {
+        ocupado = false;
+        inputMensaje.disabled = false;
+        btnEnviar.disabled = false;
+        inputMensaje.focus();
       }
+    }
+
+    formularioChat.addEventListener('submit', (e) => {
+      e.preventDefault();
+      enviarMensaje(inputMensaje.value);
+    });
+    function limpiarConversacion() {
+      cajaMensajes.innerHTML = `
+        <div class="fila-mensaje fila-bot">
+          <img src="/static/senabot.jpg" alt="SENABot" class="avatar-mensaje" width="36" height="36">
+          <div class="burbuja burbuja-bot">
+            <p>¡Hola! Soy <strong>SENABot</strong>, tu asistente virtual del SENA. Puedo ayudarte con dudas sobre carreras técnicas, requisitos, matrículas y sedes. Selecciona una pregunta frecuente o escribe tu consulta abajo.</p>
+            <span class="hora-mensaje">${obtenerHoraActual()}</span>
+          </div>
+        </div>
+      `;
+      indicadorEscribiendo.classList.add('oculto');
+      inputMensaje.focus();
+    }
+
+    btnLimpiarChat.addEventListener('click', limpiarConversacion);
+
+    document.querySelectorAll('.btn-pregunta, .btn-chip').forEach(boton => {
+      boton.addEventListener('click', () => {
+        const pregunta = boton.getAttribute('data-pregunta');
+        if (pregunta) {
+          enviarMensaje(pregunta);
+        }
+      });
+    });
+
+    btnToggleMovil.addEventListener('click', () => {
+      chipsMovil.classList.toggle('cerrado');
     });
   </script>
 </body>
