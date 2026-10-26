@@ -256,17 +256,6 @@ header {
   font-weight: 500;
 }
 
-.hora-mensaje {
-  display: block;
-  font-size: 11px;
-  color: #888888;
-  margin-top: 4px;
-  text-align: right;
-}
-
-.burbuja-usuario .hora-mensaje {
-  color: #003300;
-}
 
 /* Indicador de "Escribiendo..." */
 .indicador-escribiendo {

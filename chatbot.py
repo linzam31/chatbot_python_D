@@ -1,13 +1,20 @@
+# pyrefly: ignore[missing-import]
 from fastapi import Request
-from fastapi import requests
+# pyrefly: ignore[missing-import]
 from tempfile import template
+# pyrefly: ignore[missing-import]
 from typing import Dict, List
 import unicodedata
+# pyrefly: ignore[missing-import]
 from fastapi import FastAPI
+# pyrefly: ignore[missing-import]
 from fastapi.responses import HTMLResponse
+# pyrefly: ignore[missing-import]
 from fastapi.templating import Jinja2Templates
+# pyrefly: ignore[missing-import]
 from pydantic import BaseModel, Field
 from iaGenerativa import generar_respuestas
+# pyrefly: ignore[missing-import]
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(title="SENA bot", version="1.0.0")

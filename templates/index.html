@@ -24,7 +24,7 @@
     <main class="contenido-principal">
       
       <aside class="seccion-preguntas">
-        <h2 class="titulo-preguntas">• Preguntas frecuentes</h2>
+        <h2 class="titulo-preguntas">Preguntas frecuentes</h2>
         
         <div class="lista-preguntas">
           <button type="button" class="btn-pregunta" data-pregunta="¿Qué programas de formación ofrece el SENA?">
@@ -46,6 +46,14 @@
           <button type="button" class="btn-pregunta" data-pregunta="¿Cuáles son los horarios y modalidades de formación disponibles?">
             <span class="simbolo">?</span> ¿Cuáles son los horarios y modalidades?
           </button>
+
+          <button type="button" class="btn-pregunta" data-pregunta="¿Cuál es la duración de la etapa lectiva y productiva en los programas técnicos y tecnólogos del SENA?">
+            <span class="simbolo">?</span> ¿Cuánto dura la etapa lectiva y productiva?
+          </button>
+
+          <button type="button" class="btn-pregunta" data-pregunta="¿Qué es el contrato de aprendizaje del SENA y cómo funciona?">
+            <span class="simbolo">?</span> ¿Qué es el contrato de aprendizaje?
+          </button>
         </div>
       </aside>
 
@@ -62,8 +70,7 @@
           <div class="fila-mensaje fila-bot">
             <img src="/static/senabot.jpg" alt="SENABot" class="avatar-mensaje" width="36" height="36">
             <div class="burbuja burbuja-bot">
-              <p>¡Hola! Soy <strong>SENABot</strong>, tu asistente virtual del SENA. Puedo ayudarte con dudas sobre carreras técnicas, requisitos, matrículas y sedes. Selecciona una pregunta frecuente o escribe tu consulta abajo.</p>
-              <span class="hora-mensaje" id="hora-inicio">10:15 a. m.</span>
+              <p>¡Hola! Soy <strong>SENABot</strong>, tu asistente virtual del SENA. Puedo ayudarte con dudas sobre carreras técnicas, requisitos, matrículas, sedes, etapas formativas y contrato de aprendizaje. Selecciona una pregunta frecuente o escribe tu consulta abajo.</p>
             </div>
           </div>
         </div>
@@ -83,6 +90,8 @@
             <button type="button" class="btn-chip" data-pregunta="¿Cómo es el proceso de matrícula e ingreso al SENA?">Matrícula</button>
             <button type="button" class="btn-chip" data-pregunta="¿Dónde se encuentran ubicadas las sedes y centros del SENA?">Sedes</button>
             <button type="button" class="btn-chip" data-pregunta="¿Cuáles son los horarios y modalidades de formación disponibles?">Horarios</button>
+            <button type="button" class="btn-chip" data-pregunta="¿Cuál es la duración de la etapa lectiva y productiva en los programas técnicos y tecnólogos del SENA?">Etapas formativas</button>
+            <button type="button" class="btn-chip" data-pregunta="¿Qué es el contrato de aprendizaje del SENA y cómo funciona?">Contrato de aprendizaje</button>
           </div>
         </div>
 
@@ -116,26 +125,14 @@
 
     let ocupado = false;
 
-    function obtenerHoraActual() {
-      const ahora = new Date();
-      return ahora.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-    }
-
-    const horaInicio = document.getElementById('hora-inicio');
-    if (horaInicio) {
-      horaInicio.textContent = obtenerHoraActual();
-    }
-
     function agregarMensaje(remitente, texto) {
       const fila = document.createElement('div');
       fila.className = `fila-mensaje ${remitente === 'usuario' ? 'fila-usuario' : 'fila-bot'}`;
-      const hora = obtenerHoraActual();
 
       if (remitente === 'usuario') {
         fila.innerHTML = `
           <div class="burbuja burbuja-usuario">
             <p>${limpiarHTML(texto)}</p>
-            <span class="hora-mensaje">${hora}</span>
           </div>
         `;
       } else {
@@ -143,7 +140,6 @@
           <img src="/static/senabot.jpg" alt="SENABot" class="avatar-mensaje" width="36" height="36">
           <div class="burbuja burbuja-bot">
             <p>${formatearTextoBot(texto)}</p>
-            <span class="hora-mensaje">${hora}</span>
           </div>
         `;
       }
@@ -212,18 +208,21 @@
       e.preventDefault();
       enviarMensaje(inputMensaje.value);
     });
+
     function limpiarConversacion() {
-      cajaMensajes.innerHTML = `
-        <div class="fila-mensaje fila-bot">
-          <img src="/static/senabot.jpg" alt="SENABot" class="avatar-mensaje" width="36" height="36">
-          <div class="burbuja burbuja-bot">
-            <p>¡Hola! Soy <strong>SENABot</strong>, tu asistente virtual del SENA. Puedo ayudarte con dudas sobre carreras técnicas, requisitos, matrículas y sedes. Selecciona una pregunta frecuente o escribe tu consulta abajo.</p>
-            <span class="hora-mensaje">${obtenerHoraActual()}</span>
+      const confirmar = confirm("¿Estás seguro de que deseas borrar toda la conversación?");
+      if (confirmar) {
+        cajaMensajes.innerHTML = `
+          <div class="fila-mensaje fila-bot">
+            <img src="/static/senabot.jpg" alt="SENABot" class="avatar-mensaje" width="36" height="36">
+            <div class="burbuja burbuja-bot">
+              <p>¡Hola! Soy <strong>SENABot</strong>, tu asistente virtual del SENA. Puedo ayudarte con dudas sobre carreras técnicas, requisitos, matrículas, sedes, etapas formativas y contrato de aprendizaje. Selecciona una pregunta frecuente o escribe tu consulta abajo.</p>
+            </div>
           </div>
-        </div>
-      `;
-      indicadorEscribiendo.classList.add('oculto');
-      inputMensaje.focus();
+        `;
+        indicadorEscribiendo.classList.add('oculto');
+        inputMensaje.focus();
+      }
     }
 
     btnLimpiarChat.addEventListener('click', limpiarConversacion);

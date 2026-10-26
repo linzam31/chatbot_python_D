@@ -5,14 +5,70 @@ DESDE 1967
 Misión y visión institucional SENA
 Artes gráficas Comunicación Innovación
 ¿Quiénes somos?
-Formamos profesionales en artes gráficas con metodologías innovadoras, acceso a tecnología de punta y un enfoque integral adaptado a las necesidades de la industria.
+Formamos profesionales en artes gráficas con metodologías innovadoras, acceso a tecnología de punta y un enfoque integral
+ adaptado a las necesidades de la industria.
 Misión
-El SENA invierte en el desarrollo social y técnico de los trabajadores colombianos, ofreciendo formación profesional integral para la incorporación y el desarrollo de las personas en actividades productivas que aporten al crecimiento del país.
+El SENA invierte en el desarrollo social y técnico de los trabajadores colombianos, ofreciendo formación profesional 
+integral para la incorporación y el desarrollo de las personas en actividades productivas que aporten al crecimiento 
+del país.
 Visión
-Ser referente en la cualificación del talento humano a nivel nacional e internacional, a través de la formación técnica, tecnológica y la innovación metodológica permanente.
+Ser referente en la cualificación del talento humano a nivel nacional e internacional, a través de la formación técnica, 
+tecnológica y la innovación metodológica permanente.
 
 
 FUENTE DE INFORMACION
+
+
+ORIGENES
+
+1966 – 1967 · Los orígenes
+El anhelo del SENA por capacitar a las clases trabajadoras vinculadas al sector de las artes gráficas llevó a sus dirigentes
+ a realizar los primeros estudios en 1966, estableciendo las necesidades de educación y las tendencias tecnológicas que 
+ requería la industria de la época. En el estudio de factibilidad de 1963 ya se había identificado que Bogotá concentraba 
+ el 48% de la industria gráfica del país, lo que exigía tanto a empresas como a trabajadores actualizarse y cualificar su
+  labor.
+
+Fue así como los gremios de la producción gráfica solicitaron al SENA la creación de un centro dedicado a la formación en 
+artes gráficas y afines. El SENA y la OIT iniciaron los estudios de factibilidad, el diseño de los programas, la 
+formación de los técnicos como instructores, la construcción de la planta física y la adquisición de equipos.
+
+Con base en este trabajo nació en 1967 el Centro Nacional de Artes Gráficas, conocido actualmente como Centro para la 
+Industria de la Comunicación Gráfica –Cenigraf–, que hace parte del SENA Distrito Capital. El 14 de mayo de 1967 abrió 
+sus puertas a 156 aprendices, en programas a la vanguardia tecnológica del momento: Composición Mecánica y Tipográfica, 
+Fotolitografía, Fotografía de Reproducción, Fotograbado, Impresión Offset y Encuadernación. Desde sus primeros años recibió
+ cooperación técnica de países como Francia y Brasil para la adquisición de equipos y la capacitación permanente de sus 
+ instructores.
+
+Años 80 – 90 · Modernización tecnológica
+"Antes todo era una aventura. Cuando sacábamos una película, esta nunca salía con la misma densidad de color porque 
+dependía del movimiento del operario, la concentración del químico y la temperatura. Hoy en día todas las planchas 
+salen con las mismas características y en cinco minutos", explica Omar Torino, instructor de preprensa de Cenigraf.
+
+Desde sus inicios, el Centro implementó procesos fotomecánicos y manuales que en su momento marcaron las pautas del 
+sector, formando a miles de colombianos en dibujo, composición tipográfica, fotomecánica, fotograbado, impresión 
+tipográfica, impresión offset y encuadernación. Con el paso del tiempo, en los años 80 se empezó a gestionar la 
+preprensa basada en tecnología Computer to Film (CTF), y posteriormente en tecnología Computer to Plate (CTP) 
+de color: una revolución que impulsó el desarrollo de la industria gráfica nacional, sumando programas de dibujo 
+publicitario, armada y diagramación, fotocomposición y diseño gráfico.
+
+Desde entonces Cenigraf ha recibido cooperación y realizado alianzas técnicas con países como Francia, Alemania, 
+Brasil y Estados Unidos, lo que permitió la renovación tecnológica, la actualización de los programas y la formación 
+continua de los instructores, articulando esfuerzos para servir a la competitividad de las empresas.
+
+Hoy · La era digital
+Ante las innovaciones técnicas y tecnológicas, la incorporación de la informática y las TIC, y la migración de la 
+sociedad hacia una era digital, Cenigraf —ahora Centro para la Industria de la Comunicación Gráfica— ha cruzado 
+fronteras e inspirado a muchos. El Centro se trazó como meta rediseñarse para estar a la vanguardia de la 
+globalización, incluyendo programas como preprensa digital para medios impresos, impresión offset, serigráfica y 
+flexográfica, encuadernación de documentos impresos y diseño para la comunicación gráfica, ofrecidos en todo el país a 
+través de sus aulas móviles.
+
+En el Centro no solo se enseña, se transforma: se prepara a la próxima generación de profesionales con un modelo que 
+marca la diferencia, apoyado en un aprendizaje que inspira a crear y resolver problemas —no solo a memorizar—, en 
+tecnología de vanguardia con las mismas herramientas que usan los líderes de la industria, y en un enfoque en el 
+"saber hacer" que desarrolla habilidades y métodos de trabajo. Así, se forman no solo técnicos, sino ciudadanos 
+creativos, con pensamiento crítico, espíritu emprendedor y sentido de equipo, en constante evolución junto con las 
+tendencias del sector.
 
 
 
@@ -177,28 +233,61 @@ Portal de Inscripciones:
 https://betowa.sena.edu.co
 
 
+INFORMACIÓN SOBRE ETAPAS DE FORMACIÓN DEL SENA (LECTIVA Y PRODUCTIVA)
+Todos los programas de formación titulada del SENA (Técnicos y Tecnólogos) comprenden dos etapas obligatorias:
+
+1. Etapa Lectiva:
+- Periodo en el que el aprendiz adquiere las competencias, conocimientos técnicos y habilidades en ambientes pedagógicos del SENA (aulas, talleres, laboratorios o ambientes virtuales).
+
+2. Etapa Productiva:
+- Periodo en el que el aprendiz aplica, complementa y fortalece en un entorno real de trabajo lo aprendido durante la etapa lectiva, resolviendo problemas propios del sector productivo.
+
+DURACIÓN POR NIVEL DE FORMACIÓN:
+- Nivel Técnico Laboral / Profesional:
+  * Duración total habitual: Entre 12 y 15 meses (1 año a 1 año y 3 meses).
+  * Etapa Lectiva: Generalmente de 6 a 9 meses de formación en el centro o virtual.
+  * Etapa Productiva: 6 meses continuos de práctica en el sector empresarial.
+
+- Nivel Tecnólogo:
+  * Duración total habitual: Entre 24 y 27 meses (2 años a 2 años y 3 meses).
+  * Etapa Lectiva: Generalmente de 18 a 21 meses (aproximadamente año y medio a 21 meses) de formación teórica.
+  * Etapa Productiva: 6 meses continuos de práctica empresarial.
+
+Modalidades / alternativas para realizar la Etapa Productiva:
+- Contrato de aprendizaje.
+- Vinculación laboral o contractual (afín al programa de formación).
+- Proyecto productivo o empresarial (SENA Emprende Rural, Fondo Emprender, proyectos I+D+i).
+- Pasantías (en empresas, PYMES, ONGs o instituciones públicas).
+- Monitorías en el SENA en áreas relacionadas con su especialidad.
+
+
 INFORMACIÓN DE CONTRATO DE APRENDIZAJE
+¿Qué es el contrato de aprendizaje?
+Es una forma especial dentro del derecho laboral colombiano (regulada por la Ley 789 de 2002) mediante la cual un estudiante o aprendiz del SENA recibe formación teórico-práctica en una entidad autorizada a cambio de que una empresa patrocinadora proporcione los medios para su formación metódica y le otorgue un apoyo de sostenimiento mensual. No constituye contrato de trabajo ni genera pago de prestaciones sociales.
+
+¿Cómo funciona y qué beneficios otorga?
+1. Fases y apoyos económicos:
+- Durante la Etapa Lectiva: El aprendiz recibe un apoyo de sostenimiento mensual (mínimo el 50% de 1 SMMLV) y la empresa lo afilia a la EPS (Salud).
+- Durante la Etapa Productiva: El aprendiz recibe un apoyo de sostenimiento mensual (entre el 75% y el 100% de 1 SMMLV según las condiciones normativas y la tasa de desempleo nacional) y cobertura en EPS (Salud) y ARL (Riesgos Laborales) asumidas en su totalidad por la empresa.
+
+2. Duración máxima:
+- Hasta 2 años continuos o discontinuos para el mismo programa formativo.
+
+3. Plataforma oficial de gestión:
+- Sistema de Gestión Virtual de Aprendices (SGVA / Caprendizaje): https://caprendizaje.sena.edu.co/
+
+DATOS DE CONTACTO Y LIDERAZGO EN CENIGRAF:
 Gina Marcela Contreras Quiroga
-LIDER CONTRATO DE APRENDIZAJE
-DATOS DE CONTACTO
-CENTRO DE FORMACIÓN
-NOMBRE
-Gina Marcela Contreras Quiroga
-CENTRO
-Centro para la Industria de la Comunicación Gráfica
-ROL
-Lider Contrato de Aprendizaje
-REGIONAL
-CORREO
-Distrito Capital
-gmcontreras@sena.edu.co
-DIRECCIÓN
-Cra. 32 #15-80, Bogotá D.C.
+ROL: Líder Contrato de Aprendizaje
+CENTRO: Centro para la Industria de la Comunicación Gráfica (Cenigraf) - Regional Distrito Capital
+CORREO: gmcontreras@sena.edu.co
+DIRECCIÓN: Cra. 32 #15-80, Bogotá D.C.
 
 
 
 INFORMACIÓN DE CONTACTO
-Servicio Nacional de Aprendizaje SENA - Centro para la Industria de la Comunicación Gráfica Cenigraf - Regional Distrito Capital
+Servicio Nacional de Aprendizaje SENA - Centro para la Industria de la Comunicación Gráfica Cenigraf - Regional Distrito 
+Capital
 Dirección: Cra. 32 #15 - 80 
 Teléfonos: 546 1500 ο 596 0100 
 Ext.: 15 463
@@ -206,3 +295,10 @@ Atención telefónica: lunes a viernes 7:00 a.m. a 7:00 p.m. - sábados 8:00 a.m
 Línea de atención al ciudadano, empresario y línea PQRS: Bogotá +(57) 601 7366060
 Línea gratuita y resto del País: 018000 910270
 
+
+UBICACIÓN DE CENIGRAF
+Dirección: Cra. 32 #15 - 80 
+
+Horarios de atención: 
+    lunes a viernes 7:00 a.m. a 7:00 p.m.
+    sábados 8:00 a.m. a 1:00 p.m.
